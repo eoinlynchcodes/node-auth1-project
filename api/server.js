@@ -4,7 +4,7 @@ const cors = require('cors');
 const session = require('express-session');
 
 // Routes are instantiated and imported here...
-const authRouter = require('../auth/auth-router');
+// const authRouter = require('../auth/auth-router');
 
 const server = express();
 
@@ -25,7 +25,7 @@ server.use(helmet());
 server.use(express.json());
 server.use(cors());
 
-server.use('/auth', authRouter);
+// server.use('/auth', authRouter);
 
 server.get('/', (req, res) => {
     res.json({ api: "up" });
